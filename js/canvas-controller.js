@@ -33,10 +33,10 @@ function renderCanvas() {
     var canvasWidth = 300;
     var canvasHeight = canvasWidth / 4 * 3
 
-    var ctx = canvas.getContext('2d')
+    // var ctx = canvas.getContext('2d')
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
 
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
     // debugger
     drawImg(getImgUrl());
 
@@ -45,11 +45,9 @@ function renderCanvas() {
         img.onload = function () {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             // debugger
-           
         };
         img.src = imgUrl + '';
     }
-
 }
 
 function drawText(txt, x, y) {
