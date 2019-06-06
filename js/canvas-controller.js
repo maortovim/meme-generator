@@ -18,6 +18,7 @@ document.querySelector('.img-gallery').innerHTML = strHTML;
 }
 
 function onChooseImg(img) {
+    drawImg(img);
     console.log(img);
     console.log(img.alt);
     console.log(img.id);
