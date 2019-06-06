@@ -1,38 +1,71 @@
+'use strict'
 // // f: setCanvasSize
 //    f: drawImg(gMeme)
 // takes gMeme
 // draw it according to size 
 
+function createCanvas() {
+    let canvasWidth = getCanvasWidth()
 
-function init() {
-    renderImgs();
-}
-
-function renderImgs() {
-    let imgs = createImages();
-    var strHTML = '';
-    imgs.forEach(img => {
-        strHTML += `<img class="meme-img" id="${img.id}" onclick="onChooseImg(this)" src="img/${img.id}.jpg" alt=${img.keywords}></img>`;
-    });
-document.querySelector('.img-gallery').innerHTML = strHTML;
-}
-
-function onChooseImg(img) {
-    drawImg(img);
-    console.log(img);
-    console.log(img.alt);
-    console.log(img.id);
 }
 
 
-
-function drawImg() {
-    // const img = document.querySelector('img');
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+function getCanvasWidth() {
+    let MARGIN = 20;
+    return window.innerWidth - 2 * MARGIN;
 }
 
-// function downloadMeme (el) {
-//     var image = canvas.toDataURL("image/png;base64");
-//     el.href = image;
-//   };
 
+function onCanavasInit() {
+
+    getCanvasWidth()
+    create()
+
+}
+
+
+function getCanvasWidth() {
+    let MARGIN = 20;
+    return window.innerWidth - 2 * MARGIN;
+}
+
+function create() {
+
+    var canvas = document.querySelector('#canvas')
+    var canvasWidth = 300;
+    var canvasHeight = canvasWidth / 4 * 3
+
+    var ctx = canvas.getContext('2d')
+
+    debugger
+    canvas.width = canvasWidth
+    canvas.height = canvasHeight
+
+    let memeImgUrl = getImgUrlbyId()
+
+    const image = new Image(canvasWidth, canvasHeight);
+    image.src = memeImgUrl
+    image.onload = ((image) => {
+        ctx.drawImage(image, 0, 0);
+    })
+
+
+
+
+    function drawImG() {
+
+
+
+
+
+    }
+
+
+
+
+    ctx.fillStyle = "#FF0000";
+
+    ctx.fillRect(20, 20, 150, 100);
+
+
+}

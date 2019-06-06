@@ -1,0 +1,13 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-network-navigation: unicode(ea01);
+
+.icon-network-navigation::before {
+  content: $icon-network-navigation;
+}
+
