@@ -7,8 +7,7 @@ const canvas = document.querySelector('#canvas');
 const ctx = canvas.getContext('2d');
 
 function createCanvas() {
-    let canvasWidth = getCanvasWidth()
-
+    let canvasWidth = getCanvasWidth();
 }
 
 
@@ -19,10 +18,8 @@ function getCanvasWidth() {
 
 
 function onCanavasInit() {
-
-    getCanvasWidth()
-    renderCanvas()
-
+    getCanvasWidth();
+    renderCanvas();
 }
 
 
@@ -33,19 +30,15 @@ function getCanvasWidth() {
 
 function renderCanvas() {
 
-
     var canvasWidth = 300;
     var canvasHeight = canvasWidth / 4 * 3
 
     var ctx = canvas.getContext('2d')
 
-
     canvas.width = canvasWidth
     canvas.height = canvasHeight
     // debugger
-    let memeImgUrl = getImgUrl();
-
-    drawImg(memeImgUrl);
+    drawImg(getImgUrl());
 
     function drawImg(imgUrl) {
         var img = new Image;
@@ -77,4 +70,4 @@ function onTypeText(txt) {
 function downloadMeme (el) {
     var image = canvas.toDataURL(getImgUrl());
     el.href = image;
-  };
+};

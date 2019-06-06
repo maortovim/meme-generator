@@ -15,7 +15,7 @@ body {
 
 .img-gallery {
     grid-template-columns: repeat(4, minmax(180px, 20vw));    
-    grid-template-rows: repeat(3, 20vh);     
+    grid-template-rows: repeat(6, 20vh);     
     grid-gap: 15px;
     max-width: 1200px;
     margin: 20px auto;

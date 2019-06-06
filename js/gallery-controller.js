@@ -2,6 +2,8 @@
 
 
 function init() {
+    createImages();
+    createMeme();
     renderImgs();
 }
 
@@ -18,3 +20,4 @@ function onChooseImg(img) {
    updateSelectedImgId(img.id);
    window.location.href = 'editor.html';
 }
+
