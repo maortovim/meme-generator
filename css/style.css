@@ -1,0 +1,42 @@
+
+
+body {
+    margin: 0;
+    background-color: rgb(19, 18, 18);
+}
+
+.gallery h1 {
+    color: rgb(230, 230, 230);
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img-gallery {
+    grid-template-columns: repeat(4, minmax(180px, 20vw));    
+    grid-template-rows: repeat(3, 20vh);     
+    grid-gap: 15px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.meme-img {
+    width: 100%;   
+    height: 100%;  
+    object-fit: cover;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1170px) {
+
+}
+  
