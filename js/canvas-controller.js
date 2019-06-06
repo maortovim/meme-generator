@@ -21,7 +21,7 @@ function getCanvasWidth() {
 function onCanavasInit() {
 
     getCanvasWidth()
-    create()
+    renderCanvas()
 
 }
 
@@ -31,37 +31,35 @@ function getCanvasWidth() {
     return window.innerWidth - 2 * MARGIN;
 }
 
-function create() {
+function renderCanvas() {
 
-    
+
     var canvasWidth = 300;
     var canvasHeight = canvasWidth / 4 * 3
 
     var ctx = canvas.getContext('2d')
 
-    // debugger
+
     canvas.width = canvasWidth
     canvas.height = canvasHeight
+    // debugger
+    let memeImgUrl = getImgUrl();
 
-    // let memeImgUrl = getImgUrlbyId()
-
-    drawImg('https://www.outsideonline.com/sites/default/files/styles/full-page/public/2019/04/02/mount-everest-climbers-stories_h.jpg?itok=QOk9XQrU');
-
-    ctx.fillStyle = "#FF0000";
-
-    ctx.fillRect(20, 20, 150, 100);
+    drawImg(memeImgUrl);
 
     function drawImg(imgUrl) {
         var img = new Image;
-        img.onload = function(){
-          ctx.drawImage(img,0,0,canvas.width, canvas.height ); 
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            // debugger
+           
         };
-        img.src = imgUrl;
+        img.src = imgUrl + '';
     }
 
 }
 
-function drawText(txt,x,y) {
+function drawText(txt, x, y) {
     ctx.fillStyle = 'white'
     ctx.strokeStyle = 'white'
     ctx.font = "35px Arial";
@@ -71,5 +69,12 @@ function drawText(txt,x,y) {
 
 
 function onTypeText(txt) {
-drawText(txt,100,100);
+    // debugger
+    drawText(txt, 100, 100);
+    // drawText(txt,100,100);
 }
+
+function downloadMeme (el) {
+    var image = canvas.toDataURL(getImgUrl());
+    el.href = image;
+  };

@@ -16,4 +16,5 @@ document.querySelector('.img-gallery').innerHTML = strHTML;
 
 function onChooseImg(img) {
    updateSelectedImgId(img.id);
+   window.location.href = 'editor.html';
 }

@@ -5,7 +5,7 @@ let gMeme = {
         selectedImgId: 5,
         txts: [{
             line: 'I never eat Falafel',
-            size: 20,
+            size: 14,
             align: 'left',
             color: 'red'
         }]
@@ -26,10 +26,20 @@ function updateSelectedImgId(imgId) {
 createImages();
 
 function createImages() {
-    gImgs = [];
-    for (let i = 1; i < 13; i++) {
-        gImgs.push(createImage(['happy'], i))
-    }
+    gImgs = [
+        (createImage(['happy'], 1)),
+        (createImage(['happy'], 2)),
+        (createImage(['happy'], 3)),
+        (createImage(['happy'], 4)),
+        (createImage(['happy'], 5)),
+        (createImage(['happy'], 6)),
+        (createImage(['happy'], 7)),
+        (createImage(['happy'], 8)),
+        (createImage(['happy'], 9)),
+        (createImage(['happy'], 10)),
+        (createImage(['happy'], 11)),
+        (createImage(['happy'], 12)),
+    ];
     return gImgs;
 }
 
@@ -43,7 +53,7 @@ function createImage(keywords, id) {
 }
 
 
-function getImgUrlbyId() {
+function getImgUrl() {
     var id = gMeme.selectedImgId;
     let img = gImgs.find((img) => {
         return img.id === id
@@ -53,17 +63,3 @@ function getImgUrlbyId() {
 
 
 
-// var gImgs = [{
-//     id: 1,
-//     url: 'img/popo.jpg',
-//     keywords: ['happy']
-// }];
-// var gMeme = {
-//     selectedImgId: 5,
-//     txts: [{
-//         line: 'I never eat Falafel',
-//         size: 20,
-//         align: 'left',
-//         color: 'red'
-//     }]
-// } // 
