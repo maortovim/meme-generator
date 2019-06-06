@@ -15,26 +15,18 @@
 //         size: 20,
 //         align: 'left',
 //         color: 'red'
-// //     }]
-// // }
-
-// function getImgUrlbyId(id = gImgs.selectedImgId) {
-//     return gImgs.find((img) => {
-//         return gImgs.id === id
-//     })
-
-
+//     }]
 // }
+
 
 
 
 
 // function getMeme() {
-//     return gMeme
+//     return gMeme;
 // }
 
 
 
 
 
-// 

@@ -1,15 +1,29 @@
 'use strict'
 
 let gImgs;
-
+let gMeme = {
+        selectedImgId: 5,
+        txts: [{
+            line: 'I never eat Falafel',
+            size: 20,
+            align: 'left',
+            color: 'red'
+        }]
+    };
 
 let gKeywords = {
     'happy': 12,
     'funny puk': 1
 }
 
+function updateSelectedImgId(imgId) {
+    gMeme.selectedImgId = +imgId;
+    // console.log(gMeme.selectedImgId);
+}
 
-// createImages();
+
+
+createImages();
 
 function createImages() {
     gImgs = [];
@@ -29,6 +43,16 @@ function createImage(keywords, id) {
 }
 
 
+function getImgUrlbyId() {
+    var id = gMeme.selectedImgId;
+    let img = gImgs.find((img) => {
+        return img.id === id
+    })
+    return img.url;
+}
+
+
+
 // var gImgs = [{
 //     id: 1,
 //     url: 'img/popo.jpg',
@@ -43,4 +67,3 @@ function createImage(keywords, id) {
 //         color: 'red'
 //     }]
 // } // 
-// get imgbyid(id)
