@@ -2,12 +2,12 @@
 
 body {
     margin: 0;
-    background-color: rgb(19, 18, 18);
+    /* background-color: rgb(19, 18, 18); */
     /* background-image:url('http://www.yo-yoo.co.il/rekaim/images/uploads/cbb511.jpg'); */
 }
 
 .gallery h1 {
-    color: rgb(230, 230, 230);
+    color: rgb(110, 110, 110);
     text-align: center;
     font-size: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
